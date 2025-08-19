@@ -15,6 +15,27 @@ header {
     align-items: center;
 }
 
+.header-mobile {
+    display: none;
+}
+
+@media only screen and (max-width:480px) {
+    header {
+        display: none;
+    }
+
+    .header-mobile {
+    background-color: white;
+    padding: 0 50px;
+    width: 100%;
+
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
 .name {
     padding-left: 24px;
     display: flex;
@@ -27,6 +48,7 @@ header nav {
     display: flex;
     gap: 16px;
     padding-right: 24px;
+    list-style: none;
 }
 
 .banner-one {
@@ -50,8 +72,39 @@ header nav {
 .banner-one .button {
     color: white;
     background-color: black;
-    padding: 8px 150px;
+    padding: 8px 30px;
+    width: 100%;
     text-align: center;
+}
+
+@media only screen and (max-width:480px) {
+    .banner-one {
+    display: block;
+}
+
+    .banner-one img {
+    padding: 0;
+    width: 100%;
+}
+
+    .banner-one div {
+    padding: 32px 16px;
+    gap: 0;
+}
+
+    .banner-one h1 {
+        padding-bottom: 32px;
+    }
+
+    .banner-one h2 {
+        padding-bottom: 24px;
+    }
+
+    .banner-one .button {
+        position: relative;
+        width: 50%;
+        left: 25%;
+}
 }
 
 .banner-two {
@@ -104,6 +157,35 @@ header nav {
     gap: 8px;
 }
 
+.mobile-banner {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .banner-two {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+        padding: 16px 16px 32px;
+        width: 100%;
+    }
+
+    .mobile-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        padding: 16px 16px 64px;
+    }
+
+    .last .text {
+        padding: 16px 16px 0px;        
+    }
+}
+
 .tilespace {
     background-color: seashell;
 }
@@ -139,6 +221,31 @@ header nav {
     padding: 16px;
 }
 
+@media only screen and (max-width: 480px) {
+
+    .tilespace img {
+        display: none;
+    }
+
+    .tilespace h3 {
+        display: none;
+    }
+
+    .tilespace .tiles {
+    padding: 16px 0px 32px;
+    gap: 8px;
+    width: 100%;
+    }
+
+    .tile {
+    flex-basis: 90%;
+    }
+
+    .tiles .text{
+    padding: 16px 16px 24px;
+    }
+}
+
 .thesis {
     background-color: pink;
 }
@@ -148,6 +255,24 @@ header nav {
     text-align: center;
     padding: 32px 0px 0px 0px;
 }
+
+.mobile-video {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .thesis p {
+        padding: 32px 32px 16px
+    }
+
+    .mobile-video {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding-bottom: 24px;
+    }
+}
+
 
 footer {
     background-color: white;
@@ -164,4 +289,18 @@ footer .rights {
 
 footer p{
     padding-right: 24px;
+}
+
+@media only screen and (max-width: 480px) {
+    footer p {
+        display: none;
+    }
+
+    footer .rights {
+        display: block;
+    }
+
+    footer {
+     padding: 16px 16px 16px;
+    }
 }
