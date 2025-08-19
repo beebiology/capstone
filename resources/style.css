@@ -64,6 +64,11 @@ header nav {
     padding: 32px 24px;
 }
 
+.banner-two video {
+    width: 100%;
+    height: auto;
+}
+
 .banner-two .left img {
     width: 100%;
     height: auto;
@@ -97,4 +102,66 @@ header nav {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+}
+
+.tilespace {
+    background-color: seashell;
+}
+
+.tilespace h1 {
+    text-align: center;
+    padding-top: 32px;
+    font-size: 25px;
+}
+
+.tilespace .tiles {
+    display: flex;
+    padding: 32px 72px;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile {
+    flex-basis: 300px;
+    background-color: white;
+}
+
+.tilespace img {
+    height: auto;
+    width: 100%;
+}
+
+.tiles .text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.thesis {
+    background-color: pink;
+}
+
+.thesis p {
+    font-size: 30px;
+    text-align: center;
+    padding: 32px 0px 0px 0px;
+}
+
+footer {
+    background-color: white;
+    font-size: 14px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+footer .rights {
+    flex: 1;
+    padding-left: 24px;
+}
+
+footer p{
+    padding-right: 24px;
 }
