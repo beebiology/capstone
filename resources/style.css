@@ -3,9 +3,17 @@
     box-sizing: border-box;
 }
 
-html, body {
-    background-color: pink;
+:root {
+    --pink: hsla(220, 30%, 20%, 0.3)
 }
+
+html, body {
+    background-color: var(--pink);
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+/* HERE BEGINS THE HEADER */
 
 header {
     background-color: white;
@@ -19,7 +27,270 @@ header {
     display: none;
 }
 
-@media only screen and (max-width:480px) {
+header div{
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 32px;
+    cursor: pointer;
+    transition: color 200ms ease-in-out 0ms;
+}
+
+header div:hover {
+    color:gray;
+}
+
+header nav {
+    display: flex;
+    gap: 16px;
+    padding-right: 24px;
+    list-style: none;
+    cursor: pointer;
+}
+
+header li:hover {
+    color: gray;
+}
+
+/* HERE BEGINS BANNER ONE */
+
+.banner-one {
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.banner-one img {
+    padding: 32px 24px;
+    width: 60%;
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.8);
+    margin-right: 25px;
+}
+
+.banner-one div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1.5rem;
+}
+
+.banner-one .button {
+    color: rgb(215, 211, 211);
+    background-color: rgb(79, 75, 67);
+    padding: 8px 30px;
+    margin: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 200ms ease-in-out 0ms, scale 200ms ease-in-out 0ms;
+}
+
+.button:hover {
+    scale: 1.01;
+    background-color: rgb(79, 75, 67, 0.9);
+    color: white;
+}
+
+.banner-one h1 {
+    font-size: 3rem;
+}
+
+/* HERE BEGINS BANNER TWO */
+
+.banner-two {
+    background-color: var(--pink);
+    display: flex;
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 2px 2px rgb(6, 6, 6, 0.8);
+}
+
+.banner-two .left {
+    width: 60%;
+    padding: 32px 24px;
+    font-weight: 500;
+    line-height: 10px;
+}
+
+.banner-two video {
+    width: 100%;
+    height: auto;
+}
+
+.banner-two .left img {
+    width: 100%;
+    height: auto;
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.8);
+}
+
+.banner-two .left h1 {
+    padding: 32px 0 24px 0;
+    font-size: 2rem;
+}
+
+.banner-two .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0px 32px 0px;
+}
+
+.banner-two .right .whole {
+    display: flex;
+    transition: scale 200ms ease-in-out 0ms;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.1);
+}
+
+.whole:hover {
+    scale: 1.02;
+
+}
+
+.whole:hover h3 {
+    color: blanchedalmond;
+}
+
+.banner-two .right img {
+    flex: 0 0 35%;
+    padding: 16px; 
+    width: 100%;
+    height: auto;
+}
+
+.banner-two .right .text {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px; 
+}
+
+.banner-two .text h1 {
+    font-size: 2rem;
+}
+
+.banner-two .text h2 {
+    font-size: 1rem;
+}
+
+.banner-two .text h3 {
+    font-size: 0.75rem ;
+}
+
+.mobile-banner {
+    display: none;
+}
+
+/* HERE BEGINS THE TILESPACE */
+
+.tilespace {
+    background-color: gray;
+}
+
+.tilespace h1 {
+    text-align: center;
+    padding: 32px 0px 16px;
+    font-size: 3rem;
+    color: white;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgb(6, 6, 6, 0.8);
+
+    background-color: rgb(79, 75, 67, 0.2);
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.4);
+}
+
+
+.tilespace .tiles {
+    display: flex;
+    padding: 32px 72px;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile {
+    flex-basis: 300px;
+    background-color: rgb(255, 255, 255);
+    transition: scale 200ms ease-in-out 50ms, box-shadow 300ms ease-in-out;
+}
+
+.tile:hover {
+    scale: 1.05;
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.8);
+}
+
+.tilespace img {
+    height: auto;
+    width: 100%;
+}
+
+.tiles .text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+}
+
+.tile h2 {
+    font-size: 1.5rem;
+}
+
+.tile h3 {
+    font-size: 1rem;
+}
+
+/* HERE BEGINS THE THESIS BANNER, WHICH SHARES MOST OF ITS RULES WITH BANNER TWO */
+
+.thesis p {
+    background-color: var(--pink);
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 32px 0px 0px 0px;
+    color: white;
+    font-weight: 1000;
+    text-shadow: 1px 1px 2px rgb(6, 6, 6, 0.8);
+    box-shadow: 0px 10px 10px rgb(53, 53, 53, 0.2);
+}
+
+.thesis video {
+    box-shadow: 10px 10px 10px rgb(53, 53, 53, 0.8);
+}
+
+.mobile-video {
+    display: none;
+}
+
+/* HERE LIES THE FOOTER */
+
+footer {
+    background-color: white;
+    font-size: 14px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+footer .rights {
+    flex: 1;
+    padding-left: 24px;
+}
+
+footer p{
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+footer p:hover{
+        color: gray;
+    }
+
+/* MEDIA QUERIES, STARTING WITH THE HEADER */
+
+@media only screen and (max-width:600px) {
     header {
         display: none;
     }
@@ -34,50 +305,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-}
 
-.name {
-    padding-left: 24px;
-    display: flex;
-    align-items: center;
-    flex: 1;
-    height: 32px;
-}
 
-header nav {
-    display: flex;
-    gap: 16px;
-    padding-right: 24px;
-    list-style: none;
-}
+/* MEDIA QUERIES FOR BANNER ONE */
 
-.banner-one {
-    background-color: gray;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.banner-one img {
-    padding: 32px 24px;
-    width: 60%;
-}
-
-.banner-one div {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.banner-one .button {
-    color: white;
-    background-color: black;
-    padding: 8px 30px;
-    width: 100%;
-    text-align: center;
-}
-
-@media only screen and (max-width:480px) {
     .banner-one {
     display: block;
 }
@@ -105,63 +336,10 @@ header nav {
         width: 50%;
         left: 25%;
 }
-}
 
-.banner-two {
-    background-color: pink;
-    display: flex;
-}
 
-.banner-two .left {
-    width: 60%;
-    padding: 32px 24px;
-}
+/* MEDIA QUERIES FOR BANNER TWO */
 
-.banner-two video {
-    width: 100%;
-    height: auto;
-}
-
-.banner-two .left img {
-    width: 100%;
-    height: auto;
-}
-
-.banner-two .left h1 {
-    padding: 32px 0 24px 0;
-}
-
-.banner-two .right {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    padding: 16px 0px 32px 0px;
-}
-
-.banner-two .right .whole {
-    display: flex;
-}
-
-.banner-two .right img {
-    flex: 0 0 35%;
-    padding: 16px; 
-    width: 100%;
-    height: auto;
-}
-
-.banner-two .right .text {
-    flex: 0 0 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-}
-
-.mobile-banner {
-    display: none;
-}
-
-@media only screen and (max-width: 480px) {
     .banner-two {
         display: none;
     }
@@ -184,44 +362,9 @@ header nav {
     .last .text {
         padding: 16px 16px 0px;        
     }
-}
 
-.tilespace {
-    background-color: seashell;
-}
 
-.tilespace h1 {
-    text-align: center;
-    padding-top: 32px;
-    font-size: 25px;
-}
-
-.tilespace .tiles {
-    display: flex;
-    padding: 32px 72px;
-    gap: 32px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.tile {
-    flex-basis: 300px;
-    background-color: white;
-}
-
-.tilespace img {
-    height: auto;
-    width: 100%;
-}
-
-.tiles .text{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 16px;
-}
-
-@media only screen and (max-width: 480px) {
+/* MEDIA QUERIES FOR THE TILESPACE */
 
     .tilespace img {
         display: none;
@@ -244,23 +387,10 @@ header nav {
     .tiles .text{
     padding: 16px 16px 24px;
     }
-}
 
-.thesis {
-    background-color: pink;
-}
 
-.thesis p {
-    font-size: 30px;
-    text-align: center;
-    padding: 32px 0px 0px 0px;
-}
+/* MEDIA QUERIES FOR THE THESIS BANNER */
 
-.mobile-video {
-    display: none;
-}
-
-@media only screen and (max-width: 480px) {
     .thesis p {
         padding: 32px 32px 16px
     }
@@ -271,27 +401,10 @@ header nav {
         height: auto;
         padding-bottom: 24px;
     }
-}
 
 
-footer {
-    background-color: white;
-    font-size: 14px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-}
+/* MEDIA QUERIES FOR THE FOOTER */
 
-footer .rights {
-    flex: 1;
-    padding-left: 24px;
-}
-
-footer p{
-    padding-right: 24px;
-}
-
-@media only screen and (max-width: 480px) {
     footer p {
         display: none;
     }
